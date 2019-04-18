@@ -1,0 +1,12 @@
+p{white-space:nowrap;
+		width: 500px; 
+		border: 2px solid #000;
+		text-overflow: clip;
+		overflow: ellipsis;
+		overflow: hidden;}
+.para{
+	color:red;
+}
+.web{
+	font-size: 52px;
+}

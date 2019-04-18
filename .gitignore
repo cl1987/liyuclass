@@ -10,3 +10,5 @@
 *.jpg
 *.png
 *.jpeg
+**/webfonts
+**/font

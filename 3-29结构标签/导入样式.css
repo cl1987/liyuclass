@@ -1,0 +1,7 @@
+@import url(样式2.css);
+p{
+	color: red;
+	font-weight:100;
+	font-size: 50;
+	font-style: italic;
+}

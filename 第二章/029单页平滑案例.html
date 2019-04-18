@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<link rel="stylesheet" href="../css/all.css">
+
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.page>input,.page>a{
+			width:20%;
+			height:40px;
+			line-height:40px;
+			text-align:center;
+			font-size:24px;
+			position:fixed;
+			top:0px;
+			left:0px;
+		}
+		.page>input{
+			z-index: 999;
+			opacity:0;
+			cursor: pointer;
+		}
+		.page>input:hover + a{
+			background:black;
+		}
+		.page>a{
+			text-decoration: none;
+			background:#2e2e2e;
+			color:#fff;
+			z-index: 666;
+		}
+		#ctr1,#ctr1 + a{
+			left:0%;
+		}
+		#ctr2,#ctr2 + a{
+			left:20%;
+		}
+		#ctr3,#ctr3 + a{
+			left:40%;
+		}
+		#ctr4,#ctr4 + a{
+			left:60%;
+		}
+		#ctr5,#ctr5 + a{
+			left:80%;
+		}
+		.page>input:checked + a{
+			color:#ff6203;
+		}
+		i{
+			margin-right:5px;
+		}
+		html,body,.page,.picture,.picture div{
+			width:100%;
+			height:100%;
+		}
+		body{
+			overflow: hidden;
+		}
+		.picture{
+			margin-top:40px;
+			/*overflow: hidden;*/
+			transition:all 500ms linear;
+		}
+		#ctr1:checked ~ .picture{
+			transform:translateY(-0%);
+		}
+		#ctr2:checked ~ .picture{
+			transform:translateY(-100%);
+		}
+		#ctr3:checked ~ .picture{
+			transform:translateY(-200%);
+		}
+		#ctr4:checked ~ .picture{
+			transform:translateY(-300%);
+		}
+		#ctr5:checked ~ .picture{
+			transform:translateY(-400%);
+		}
+		#z256{
+			background-image:url(../DDDVVV/biaozhun1.jpg);
+			background-repeat:no-repeat;
+			background-size: cover;
+		}
+		#z257{
+			background-image:url(../DDDVVV/biaozhun2.jpg);
+			background-repeat:no-repeat;
+			background-size: cover;
+		}
+		#z258{
+			background-image:url(../DDDVVV/biaozhun3.jpg);
+			background-repeat:no-repeat;
+			background-size: cover;
+		}
+		#z259{
+			background-image:url(../DDDVVV/biaozhun4.jpg);
+			background-repeat:no-repeat;
+			background-size: cover;
+		}
+		#z250{
+			background-image:url(../DDDVVV/biaozhun5.jpg);
+			background-repeat:no-repeat;
+			background-size: cover;
+		}
+		#ctr1:checked ~ .picture>#z256{
+			animation:sport 2s;
+		}
+		#ctr2:checked ~ .picture>#z257{
+			animation:sport 2s;
+		}
+		#ctr3:checked ~ .picture>#z258{
+			animation:sport 2s;
+		}
+		#ctr4:checked ~ .picture>#z259{
+			animation:sport 2s;
+		}
+		#ctr5:checked ~ .picture>#z250{
+			animation:sport 2s;
+		}
+		@keyframes sport{
+			from{
+				opacity:0;
+			}
+			to{
+				opacity:1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<input type="radio" name="danxuan" id="ctr1" checked>
+		<a href="#" class="aaa"><i class="fas fa-home"></i>Home</a>
+
+		<input type="radio" name="danxuan" id="ctr2">
+		<a href="#" class="aaa"><i class="fas fa-coffee"></i>Service</a>
+
+		<input type="radio" name="danxuan" id="ctr3">
+		<a href="#" class="aaa"><i class="far fa-building"></i>About</a>
+
+		<input type="radio" name="danxuan" id="ctr4">
+		<a href="#" class="aaa"><i class="fas fa-users-cog"></i>Team</a>
+
+		<input type="radio" name="danxuan" id="ctr5">
+		<a href="#" class="aaa"><i class="fas fa-phone"></i>Contact</a>
+
+		<div class="picture">
+			<div class="tupian2" id="z256">
+				<!-- <img src="../DDDVVV/biaozhun1.jpg" alt=""> -->
+			</div>
+			<div class="tupian3" id="z257">
+				<!-- <img src="../DDDVVV/biaozhun2.jpg" alt=""> -->
+			</div>
+			<div class="tupian4" id="z258">
+				<!-- <img src="../DDDVVV/biaozhun3.jpg" alt=""> -->
+			</div>
+			<div class="tupian5" id="z259">
+				<!-- <img src="../DDDVVV/biaozhun4.jpg" alt=""> -->
+			</div>
+			<div class="tupian6" id="z250">
+				<!-- <img src="../DDDVVV/biaozhun5.jpg" alt=""> -->
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

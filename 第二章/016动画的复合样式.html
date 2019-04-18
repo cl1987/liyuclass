@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		.father{
+			width:600px;
+			height:500px;
+			border:1px solid red;
+			position: relative;
+			margin:50px auto;
+		}
+		.son{
+			margin-left:30px;
+			width:100px;
+			height:100px;
+			background:aqua;
+			position: absolute;
+			animation:box;
+			animation-duration:2s;
+			animation-iteration-count:infinite;
+			animation-fill-mode:backwards;
+		}
+		@keyframes box{
+			0%{
+				top: 0px;
+				left:0px;
+			}
+			25%{
+				top:0px;
+				left:500px;
+			}
+			50%{
+				top:400px;
+				left:500px
+			}
+			75%{
+				top:400px;
+				left:0px;
+			}
+			100%{
+				top:0px;
+				left:0px;
+			}
+
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+</html>

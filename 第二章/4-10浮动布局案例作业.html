@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.clearfix:after{
+			content: "";
+			clear:both;
+			display:block;
+			height:0px;
+			visibility:hidden;
+		}
+		.clearfix{
+			*zoom:1;
+		}
+		.father{
+			width:810px;
+			/*border:1px solid black;*/
+			margin:50px auto;
+		}
+		.father1{
+			width:810px;
+			height:100px;
+			/*border:1px solid black;*/
+			/*box-sizing:border-box;*/
+			/*padding:5px;*/
+			margin-bottom:5px;
+
+		}
+		.son1{
+			width:100px;
+			height:100px;
+			background-color:red;
+			float:left;
+			/*margin-bottom:5px; */
+
+		}
+		.son2{
+			width:700px;
+			height:100px;
+			/*border:1px solid black;*/
+			/*background-color:yellow;*/
+			float:right;
+		}
+		.son2-a{
+			width:200px;
+			height:50px;
+			background:#b55511;
+			margin-left:500px;
+		}
+		.son2-b{
+			width:600px;
+			height:50px;
+			background:purple;
+			margin-left:100px;
+		}
+		.father2{
+			width:810px;
+			height:700px;
+			/*border:1px solid red;*/
+		}
+		.son21{
+			width:700px;
+			height:700px;
+			/*background-color:#f19;*/
+			float:left;
+		}
+		.son21-a{
+			width:705px;
+			height:650px;
+			/*background-color:#1245ab;*/
+		}
+		.son21-a1{
+			width:600px;
+			height:650px;
+			/*background-color:#6524;*/
+			float:left;
+			
+		}
+		.son21-a1-1{
+			width:600px;
+			height:400px;
+			background-color:#f75;
+		}
+		.son21-a1-2{
+			width:600px;
+			height:250px;
+			background-color:#f75;
+			margin-top:5px;
+		}
+		.son21-a2{
+			width:100px;
+			height:655px;
+			background-color:#d56;
+			float:right;
+
+		}
+		.son21-b{
+			width:705px;
+			height:50px;
+			background-color:red;
+			margin-top:10px;
+		}
+		.son22{
+			width:100px;
+			height:710px;
+			background-color:#bb7;
+			float:right; 
+			/*margin-left:5px;*/
+		}
+		.father3{
+			width:810px;
+			height:100px;
+			background-color:blue;
+			margin-top:15px;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+	<div class="father1 clearfix">
+		<div class="son1"></div>
+		<div class="son2">
+			<div class="son2-a"></div>
+			<div class="son2-b"></div>
+		</div>
+	</div>
+	<div class="father2">
+		<div class="son21">
+			<div class="son21-a">
+				<div class="son21-a1">
+					<div class="son21-a1-1"></div>
+					<div class="son21-a1-2"></div>
+				</div>
+				<div class="son21-a2"></div>
+			</div>
+			<div class="son21-b"></div>
+		</div>
+		<div class="son22"></div>
+	</div>
+	<div class="father3">
+		
+	</div>
+	</div>
+</body>
+</html>

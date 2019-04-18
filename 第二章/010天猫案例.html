@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		a{
+			text-decoration:none;
+		}
+		li{
+			list-style:none;
+		}
+		.box-left{
+			width:100px;
+			height:300px;
+			background:red;
+			position:fixed;
+			top:50%;
+			margin-top:-150px;
+		}
+		.box-right{
+			width:100px;
+			height:300px;
+			background:red;
+			position:fixed;
+			top:50%;
+			margin-top:-150px;
+			right:0px;
+		}
+		.biaoti{
+			width:1000px;
+			height:50px;
+			background-color:gray;
+			margin-left:-500px;
+			margin-bottom:20px;
+			position:fixed;
+			left:50%;
+			z-index:22;
+		}
+		.mingcheng{			
+			width:20%;
+			font-size:24px;
+			line-height:50px;
+			text-align:center;
+			float:left;
+		}
+		.mingcheng:hover{
+			opacity:0.6;
+			cursor:pointer;
+		}
+		.mingcheng:nth-child(3){
+			background-color:red;
+			position:relative;
+		}
+		.goutou{
+			position:absolute;
+			top:-19px;
+			left:50%;
+			margin-left:-20px;
+		}
+		.neirong{
+			width:800px;
+			height:400px;
+			background-color:pink;
+			margin-left:auto;
+			margin-right:auto;
+			margin-top:50px;
+		}
+		.bg{
+			background:url(../DDDVVV/ad1.jpg);
+			width:830px;
+			height:440px;
+			border:1px solid black;
+			position:relative;
+		}
+		.left{
+			width:30px;
+			height:50px;
+			background:gray;
+			position:absolute;
+			top:50%;
+			text-align:center;
+			line-height:50px;
+			font-size: 24px;
+			color:white;
+			font-weight:bolder;  
+		}
+		.right{
+			width:30px;
+			height:50px;
+			background:gray;
+			position:absolute;
+			top:50%;
+			right:0%;
+			text-align:center;
+			line-height:50px;
+			font-size: 24px;
+			color:white;
+			font-weight:bolder;  
+		}
+		.xuhao{
+			width:30px;
+			height:30px;
+			background:gray;
+			border-radius:15px;
+			border:1px solid black;
+			text-align: center;
+			line-height:30px;
+			color:white;
+			float:left;
+			margin-right:20px;
+		}
+		.xuhao:hover{
+			opacity:0.6;
+			cursor:pointer;
+		}
+		.op{position:absolute;
+			bottom:0px;
+			right:0px;
+			margin-right:0px;
+		}
+		.weibu{
+			width:900px;
+			height:1000px;
+			background-color:blue;
+			margin-left:auto;
+			margin-right:auto;
+			margin-top:100px;
+		}
+		.fanhui{
+			width:80px;
+			height:50px;
+			background:gray;
+			position:fixed;
+			right:0px;
+			bottom: 0px;
+			text-align: center;
+			line-height:50px;
+		}
+	</style>
+</head>
+<body>
+	<header class="biaoti">
+		<ul>
+			<li class="mingcheng">天猫会员</li>
+			<li class="mingcheng">品牌街</li>
+			<li class="mingcheng">电器城<img src="../DDDVVV/tmall.png" alt="" class="goutou"></li>
+			<li class="mingcheng">营业厅</li>
+			<li class="mingcheng">魅力惠</li>
+		</ul>
+	</header>
+	<div class="box-left"></div>
+	<div class="box-right"></div>
+	<section class="neirong">
+		<div class="bg">
+			<div class="left"><</div>
+			<div class="right">></div>
+			<ul class="op">
+				<li class="xuhao">1</li>
+				<li class="xuhao">2</li>
+				<li class="xuhao">3</li>
+				<li class="xuhao">4</li>
+				<li class="xuhao">5</li>
+			</ul>
+		</div>
+	</section>
+	<footer class="weibu"></footer>
+	<div class="fanhui">
+	<a href="#">返回顶部</a>
+</div>
+</body>
+</html>

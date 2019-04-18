@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		li{	
+			list-style:none;
+			float:left;
+			cursor:pointer;
+		}
+		.father{
+			width:800px;
+			height:500px;
+			border:2px solid black;
+			margin:50px auto;
+			overflow:hidden; 
+		}
+		img{
+			width:800px;
+			height:500px;
+		}
+		ul{
+			width:4000px;
+			animation:sos 10s linear infinite;
+		}
+		@keyframes sos{
+			from{
+				margin-left:0px;
+			}
+			to{
+				margin-left:-3200px;
+			}
+		}
+		ul:hover{
+			animation-play-state:paused;
+		}
+		ul:hover li{
+			opacity:0.5;
+		}
+		ul li:hover{
+			opacity:1;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<ul>
+			<li class="haha">
+				<img src="../DDDVVV/ad1.jpg" alt="">
+			</li>
+			<li>
+				<img src="../DDDVVV/QQ.jpg" alt="">
+			</li>
+			<li>
+				<img src="../DDDVVV/555.jpg" alt="">
+			</li>
+			<li>
+				<img src="../DDDVVV/b/222.jpg" alt="">
+			</li>
+			<li class="haha">
+				<img src="../DDDVVV/ad1.jpg" alt="">
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
