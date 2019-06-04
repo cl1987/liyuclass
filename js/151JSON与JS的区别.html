@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var json1='{"name":"tony","sex":"male","age":18}'//里面不可以有函数
+	var obj={"@":'sosos',name:'lyc',sex:'male',age:'18',sayName:function(){}}//转化为JSON对象时自动忽略掉函数  用特殊字符需用双引号包裹起来
+	console.log(json1);
+	console.log(typeof json1);//类型是字符串
+	console.log(obj);
+	console.log(typeof obj);
+	var soso=JSON.parse(json1);
+	console.log(soso);
+	var nono=JSON.stringify(obj);
+	console.log(nono);
+</script>
+</html>

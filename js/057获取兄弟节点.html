@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<ul id="list">
+		<li>1</li>
+		<li>2</li>
+		<li id="li3">3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+</body>
+<script>
+	var oUl = document.getElementById('list');
+	var aNodes = oUl.childNodes;
+	var oLi = document.getElementsByTagName('li');
+	console.log(oLi);
+	var oNextNode = oLi.nextnextSibling;
+	console.log(oNextNode === aNodes[4]);
+</script>
+</html>

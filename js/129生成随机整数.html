@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin: 0px;
+			padding:0px;
+		}
+		#box{
+			width: 700px;	
+			height:600px;
+			border:1px solid black;
+			margin:50px 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	function getRandom(min,max){
+		return Math.round(min+(max-min)*Math.random());
+	}
+	console.log(getRandom(200,300));
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var str='absd dwdwsad  awdefwe dgda'
+	var reg=new RegExp('d','g'); //构造函数
+	var reg1=/d/g;//字面量
+
+
+
+	console.log(str.replace(reg,"*"));
+	console.log(str);
+	console.log(str.replace(reg1,"*"));
+	console.log(typeof reg)
+	console.log(typeof reg1)//是对象啊
+</script>
+</html>

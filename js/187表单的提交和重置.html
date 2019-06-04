@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<form action="http://www.kuazhu.com" target="_blank">
+		<div>
+			<input type="text" name="username">
+		</div>
+		<div>
+			<input type="submit">
+			<input type="image" src="../DDDVVV/1.jpg">
+			<button type="submit">提交</button>
+			<button id="btn1">提交</button>
+		</div>
+		<div>
+			<input type="reset">
+			<button type="reset">重置</button>
+		</div>
+	</form>
+	<button id="btn">我1</button>
+</body>
+<script>
+	var oForm=document.forms[0]
+	var oBtn=document.getElementById('btn')
+	var oBtn1=document.getElementById('btn1')
+	var oBtn2=document.getElementById('btn2')
+	oForm.onsubmit=function(){
+		console.log("submit...1")
+	}
+	oBtn.onclick=function(){
+		oForm.submit();
+		oForm.reset();
+	}
+	oForm.onreset=function(){
+		console.log("onreset...1")
+	}
+</script>
+</html>

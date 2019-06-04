@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function anay(name){
+		console.log(this);
+		this.name=name
+	}
+	var obj=new anay('2223');//函数会在一开始创建一个对象，并且这个对象就是this;
+	console.log(obj);//在函数的最后会把这个this对象返回出去,不然就是undefined;
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var str='dwa 234 wda34523sg opes 31 42w1'
+	var reg1=/\d/g;
+	var reg2=/\d{2,}/g;
+	var reg3=/\d{2,4}/g;
+	var reg4=/\d+/g;
+	var reg5=/\d?/g;
+	var reg6=/\d*/g;//最少出现0次为啥3位数字被替换为两位星号呢？
+	console.log(str);
+	console.log(str.replace(reg1,"1"));
+	console.log(str.replace(reg1,1));
+	console.log(typeof str);
+	console.log(str.replace(reg2,"*"));
+	console.log(str.replace(reg3,"*"));
+	console.log(str.replace(reg4,"*"));
+	console.log(str.replace(reg5,"*"));
+	console.log(str.replace(reg6,"*"));
+</script>
+</html>

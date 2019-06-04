@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+	</ul>
+</body>
+<script>
+	// var a = 435;
+	// a>400 ? alert("一定可以") : alert("那就不行");
+	var oLi=document.getElementsByTagName('li');
+	for (var i = oLi.length - 1; i >= 0; i--) {
+		i>0 ? oLi[i].style.background="yellow":oLi[i].style.background="red";
+	}
+	// a>0 ? alert(true):alert(false);
+</script>
+</html>

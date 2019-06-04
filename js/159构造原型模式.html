@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function createPerson(name,age){
+		this.name=name;
+		this.age=age;
+	}
+	createPerson.prototype.sayname=function(){
+		console.log('I am ' + this.name);
+	}
+	createPerson.prototype.sayage=function(){
+		console.log('I am ' + this.age+' years old');
+	}
+	var person1=new createPerson('lyc','18');
+	console.log(person1)
+	person1.sayname();
+	person1.sayage();
+	var person2=new createPerson('zzb','88');
+	console.log(person2)
+	person2.sayname();
+	person2.sayage();
+	console.log(person1.sayname==person2.sayname)
+</script>
+</html>

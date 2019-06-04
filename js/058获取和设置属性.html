@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<input type="text" id="txt" value="111">
+	<button id="btn">确定</button>
+	<textarea id="content" cols="30" rows="10"></textarea>
+</body>
+<script>
+	var oTxt = document.getElementById('txt');
+	var oBtn = document.getElementById('btn');
+	var oContent = document.getElementById('content');
+
+	oBtn.onclick = function(){
+		// var sVal = oTxt.getAttribute("value");
+		var sVal = oTxt["value"];
+		// console.log(sVal);
+		oContent.value = sVal;
+	}
+</script>
+</html>

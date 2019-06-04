@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var arr = [2,8,98,2,63,56,45,22,6];
+	/*var tmp=0;
+	console.log(":::1",arr);
+	for(var i = 0; i<arr.length;i++){
+		// console.log(arr);
+		for(var j = i+1;j < arr.length;j++){
+			if(arr[i]>arr[j]){
+				tmp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = tmp;
+				// console.log(arr);
+			}
+		}
+	}
+	console.log(":::2",arr);
+	*/
+	// 方法一
+	var tmp=0;
+	for(var i=0;i<arr.length;i++){
+		for(var j=i+1;j<arr.length;j++){
+			if(arr[i]>arr[j]){
+				tmp=arr[i];
+				arr[i]=arr[j];
+				arr[j]=tmp
+				// console.log(arr)
+			}
+		}
+	}
+	console.log(arr)
+	//方法二 sort函数
+	var result=arr.sort(function(n1,n2){
+		if(n1>n2){
+			return 1  //只要是正值就行，表示n2  n1这样的排序，这是sort函数的运行机制
+		}else if(n1<n2){
+			return -1 //只要是负值就行，表示n1  n2这样的排序，这是sort函数的运行机制
+		}else{
+			return 11
+		}
+	})
+	console.log(arr)
+	//方法三 基于sort函数的简单写法
+	var result=arr.sort(function(n1,n2){
+		return n1-n2
+	})
+	console.log(arr)
+</script>
+</html>

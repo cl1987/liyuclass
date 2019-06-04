@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function to2Str(num){//定义了一个处理时间的函数
+		return num < 10 ? '0'+num : ''+num;//确保函数的返回值是两位数
+	}
+	var oBox = document.getElementById('box');//获取ID为box的DOM元素
+	var aImg = oBox.children;//获取oBox的所有子元素
+	var timer = 0;//定义一个变量的值,一会用来控制定时器的开关
+	var orderTime = new Date('2018-12-07 19:00:00');//依据指定的日期时间字符串来创建一个DATE对象
+	var endTime = orderTime.getTime();//获取目标时间距离格林尼治时间的毫秒数
+	function time(){//将一会要重复执行的代码封装成函数，方便调用，精简代码
+		var allTime = (endTime - Date.now())/1000;//获取实时时间与目标时间的差值，并将之转换为以秒为单位
+		if(allTime <= 0 ){//判断关闭定时器的条件
+			allTime = 0;//为了不让时间显示负数，所以当小于零是让它等于零
+			clearInterval(timer);//关闭名称为timer的定时器，因为当前时间已经小于或者等于目标时间，所以没有必要再运行定时器，也就是说不必再执行time这个函数
+		}
+		var oH = parseInt(allTime/3600);//对时间差值进行运算并取整，得出剩余小时数
+		var oM = parseInt((allTime%3600)/60);//对时间差值进行运算并取整，得出剩余分钟数
+		var oS = parseInt(allTime%3600)%60;//对时间差值进行运算并取整，得出剩余秒数
+		var time = to2Str(oH)+to2Str(oM)+to2Str(oS);//调用to2Str()函数，将时间处理为两位数
+		for(var i =0;i<aImg.length;i++){//对完整字符串进行遍历
+			aImg[i].src = 'image/'+time.charAt(i)+'.png';//根据得到的完整的字符串，将对应位置上换成图片，图片名称是提前准备好的
+		}
+
+	}
+	timer = setInterval(time,1000);//开启定时器，将其名称设置为timer，方便控制
+	time();//在刷新页面的时候就执行time()函数，避免出现延迟
+
+</script>
+</html>

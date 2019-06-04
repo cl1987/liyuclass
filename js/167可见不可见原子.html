@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var str='$13800 USD';
+	var reg=new RegExp(/\$/);
+	var reg1=new RegExp(/\t/);
+	var reg2=new RegExp(/\s/);
+	console.log(str.replace(reg,'楼'));
+	console.log(str.replace(reg1,'*'));
+	console.log(str.replace(reg2,'*'));
+</script>
+</html>

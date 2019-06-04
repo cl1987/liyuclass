@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin: 0px;
+			padding:0px;
+		}
+		div{
+			width:200px;
+			height:200px;
+			background:pink;
+		}
+	</style>
+</head>
+<body>
+	<button id="bto">按钮按钮按钮按钮</button>
+	<div id="box">我是内容</div>
+</body>
+<script>
+	var oBox = document.getElementById('box');
+	var oBto = document.getElementById('bto');
+
+
+	oBto.onclick = function(){
+		if (oBox.style.display == "none") {
+			oBox.style.display="block"
+		}else{
+			oBox.style.display = "none"
+		}
+	}
+</script>
+</html>

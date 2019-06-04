@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function CreatePerson(name,age,major){
+		this.name=name;
+		this.age=age;
+		this.major=major;
+	}
+	CreatePerson.prototype.saymajor=function(){
+		console.log('My major is ' + this.major);
+	}
+	var person1=new CreatePerson('lyc','18',"landscape architecture");
+	person1.saymajor();
+</script>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		li{
+			list-style-type: none;
+		}
+		.tabtn1{
+				overflow: hidden;
+				margin-bottom:30px;
+		}
+		.tabtn1 li{
+			float: left;
+			margin-left: 20px;
+			cursor:pointer;
+			
+		}
+		.tabtn1 .active{
+			color:#ff6700;
+			border-bottom:2px solid red;
+		}
+		.content1 li{
+			width:200px;
+			height:200px;
+			border:1px solid red;
+			line-height:100px;
+			text-align: center;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<ul id="tabtn" class="tabtn1">
+		<li class="active">热门</li>
+		<li>电视影音</li>
+		<li>电脑</li>
+		<li>家居</li>
+	</ul>
+	<ul id="content" class="content1">
+		<li style="display: block;">1</li>	
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+	<ul id="tabtn1" class="tabtn1">
+		<li class="active">热门</li>
+		<li>电视影音</li>
+		<li>电脑</li>
+		<li>家居</li>
+	</ul>
+	<ul id="content1" class="content1">
+		<li style="display: block;">1</li>	
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</body>
+<script>
+	/*
+		var oTabtn = document.querySelectorAll("#tabtn li");
+		var oContent = document.querySelectorAll("#content li");
+		console.log(oTabtn);
+		console.log(oContent);
+
+		for( var i = 0; i < oTabtn.length; i++){
+			oTabtn[i].nonm = i;
+			oTabtn[i].onmouseover = function tName(){
+			for(var j = 0; j < oTabtn.length; j++){
+				oTabtn[j].className = "";
+				oContent[j].style.display="none";
+			}
+				this.className = "active";
+				oContent[this.nonm].style.display="block";
+
+			}
+	   }
+   */
+   function Tab(aBtns,aContents){
+   		this.aBtns=document.querySelectorAll(aBtns);
+   		this.aContents = document.querySelectorAll(aContents);
+   		this.bindEvent();
+   }
+   	Tab.prototype.bindEvent = function() {
+   		var _this=this;
+   		for(var i=0;i<this.aBtns.length;i++){
+   			this.aBtns[i].index=i;
+   				this.aBtns[i].onclick=function(){
+   					_this.fnClick(this);
+   			}
+   		}
+   	}
+   	Tab.prototype.fnClick=function(oBtn){
+   		for(var j=0;j<this.aBtns.length;j++){
+   			this.aBtns[j].className="";
+   			this.aContents[j].style.display="none";
+   		}
+   		oBtn.className="active";
+   		this.aContents[oBtn.index].style.display="block";
+   	}	
+   new Tab("#tabtn li","#content li");
+   // new Tab("#tabtn1 li","#content1 li");
+</script>
+</html>

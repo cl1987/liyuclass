@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		.bg{
+			width:380px;
+			height:750px;
+			background:gray;
+			margin:20px auto;
+		}
+		li{
+			width:103px;
+			height:150px;
+			background:#000;
+			color:#fff;
+			font-size:2em;
+			list-style-type:none;
+			float:left;
+			margin-left:20px;
+			text-align: center;
+			line-height:150px;
+			margin-top:10px;
+		}
+		.cd{
+			margin-left:20px;
+			margin-bottom:20px;
+		}
+		.lio{
+			background:#fff;
+			color:#000;
+		}
+	</style>
+</head>
+<body>
+	<div class="bg">
+		<ul>
+			<li class="lio">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+		</ul>
+		<div class="cd">
+			<h2>1  月份</h2>
+			<p>吃饭</p>
+		</div>
+	</div>
+</body>
+<script>
+	var wer1 = document.getElementsByTagName('li');
+	var wer2 = document.querySelector('.cd');
+	var arr = ["吃饭","踏青","睡觉","玩游戏","运动","看电视","吃饭","踏青","睡觉","玩游戏","运动","思考"]
+	console.log(wer1);
+
+	for(var i = 0; i < wer1.length; i++){
+		wer1[i].wuer = i;
+		wer1[i].onmouseover = function f1(){
+			for(var j = 0; j < wer1.length; j++){
+				wer1[j].className = "";
+			}
+			this.className ="lio";
+			wer2.innerHTML = "<h2> "+ (this.wuer+1) +" 月份</h2><p>"+ arr[this.wuer] +"</p>";
+		}
+	}
+</script>
+</html>

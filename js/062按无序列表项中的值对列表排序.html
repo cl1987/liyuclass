@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<ul id="ul1">
+		<li>2</li>
+		<li>14</li>
+		<li>56</li>
+		<li>8</li>
+		<li>5</li>
+		<li>32</li>
+	</ul>
+	<button id="btn">点我排序</button>
+</body>
+<script>
+	var oUl1 = document.getElementById('ul1');
+	var oBtn = document.getElementById('btn');
+	var aLi = oUl1.children;
+
+	oBtn.onclick=function(){
+		var newLi = [];
+		for(i = 0; i<aLi.length; i++){
+			newLi.push(aLi[i]);
+		}
+		newLi.sort(function(aLi1,aLi2){
+			return aLi1.innerHTML - aLi2.innerHTML;
+			console.log(newLi);
+		})
+		for(var j = 0; j<newLi.length; j++){
+			oUl1.appendChild(newLi[j]);
+		}
+	}
+</script>
+</html>

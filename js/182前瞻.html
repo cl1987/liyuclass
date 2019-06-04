@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var str='ga1b2c3d4e5f@#$%'
+	var reg1=/[a-z](?=\d)/g;//匹配字母并且字母前边是数字 正向前瞻
+	var reg3=/[a-z](?!\d)/g;//匹配字母并且字母前边不是数字 反向前瞻
+	var reg2=/[a-z]/g;
+	console.log(str.replace(reg1,"*"))
+	console.log(str.replace(reg2,"*"))
+	console.log(str.replace(reg3,"*"))
+</script>
+</html>

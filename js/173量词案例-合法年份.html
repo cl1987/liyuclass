@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<button id="btn">检测</button>
+</body>
+<script>//合法年份(公元1000年至公元2999年):/^[1-2]\d{3}$/.test(str)
+	var oTxt=document.getElementById('txt')
+	var oBtn=document.getElementById('btn')
+	oBtn.onclick=function(){
+		var sVal=oTxt.value;
+		var reg=/^[12]\d{3}$/;
+		console.log(reg.test(sVal));
+		if(reg.test(sVal)){
+			alert('yes')
+		}else{
+			alert('no')
+		}
+	}
+
+</script>
+</html>

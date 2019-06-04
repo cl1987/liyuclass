@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		#box{
+			width: 100px;
+			height: 100px;
+			background:red;
+			margin:0px auto;
+			position:absolute;
+			top:0px;
+			left:100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<button id="btn">开始</button>
+</body>
+<script>
+	var oBox=document.getElementById('box');
+	var oBtn=document.getElementById('btn');
+	
+	var timer=0;
+	oBtn.onclick=function(){
+		// console.log(111)
+		var iSpeed=0;
+		setInterval(function(){
+			// console.log(111)
+			iSpeed+=5;
+			// console.log(iSpeed)	
+			oBox.style.top=oBox.offsetTop+iSpeed+'px';
+
+		},100)	
+	}
+</script>
+</html>

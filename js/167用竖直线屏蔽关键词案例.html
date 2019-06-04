@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<input type="text" id="txt" autocomplete="off">
+	<button id="btn">发布</button>
+	<ul id="list"></ul>
+</body>
+<script>
+	var oTxt=document.getElementById('txt');
+	var oBtn=document.getElementById('btn');
+	var oList=document.getElementById('list');
+
+	oBtn.onclick=function(){
+		var sVal=oTxt.value;
+		var reg=/淘宝|陶包|/;
+		var newsVal=sVal.replace(reg,"*");
+		var oLi=document.createElement('li');
+		oLi.innerHTML=newsVal;
+		oList.insertBefore(oLi,oList.firstChild);
+		oTxt.value="";
+	}
+</script>
+</html>

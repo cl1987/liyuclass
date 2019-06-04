@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<ul>
+		<li>1<a href="#">隐藏1</a></li>
+		<li>2<a href="#">隐藏2</a></li>
+		<li>3<a href="#">隐藏3</a></li>
+		<li>4<a href="#">隐藏4</a></li>
+		<li>5<a href="#">隐藏5</a></li>
+	</ul>
+</body>
+<script>
+	var oLi = document.getElementsByTagName('a');
+	for(var i = 0; i<oLi.length; i++){
+		oLi[i].onclick = function(){
+			this.parentNode.style.display = "none";
+		}
+	}
+
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行变色案例.html</title>
+	<style>
+		li{
+			list-style-type: none;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>111</li>
+		<li>222</li>
+		<li>333</li>
+		<li>444</li>
+		<li>555</li>
+		<li>666</li>
+		<li>777</li>
+		<li>888</li>
+	</ul>
+</body>
+<script>
+	var aLi = document.getElementsByTagName('li');
+	for( var i = 0; i < aLi.length; i++){
+		// aLi[i].style.background = "red";
+		if (i%2 == 0) {
+			aLi[i].style.background = "red";
+		} else {
+			aLi[i].style.background = "yellow";
+		}
+	}
+</script>
+</html>

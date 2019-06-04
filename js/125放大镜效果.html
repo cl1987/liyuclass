@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+	*{
+		margin:0px;
+		padding:0px;
+	}
+		#box{
+			margin:50px 100px;
+			position:relative;
+		}
+		#chanpin{
+			width:450px;
+			height:450px;
+			border:1px solid #000;
+			/*position: relative;*/
+		}
+		#chanpin img{
+			width:100%;
+			height:100%;
+		}
+		#mask{
+			width:100px;
+			height:100px;
+			background:#ccc;
+			cursor:move;
+			display:none;
+			position:absolute;
+			top:0px;
+			left:0px;
+		}
+		#list li{
+			list-style-type: none;
+			width:80px;
+			height:80px;
+			float:left;
+			margin-right:20px;
+		}
+		#list .active{
+			border:3px solid red;
+		}
+		#list img{
+			width:100%;
+			height:100%;
+		}
+		#bigger{
+			position: absolute;
+			top:0px;
+			left:452px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="chanpin">
+			<div id="mask"></div>
+			<img src="../DDDVVV/p_b_0001.jpg" alt="">
+		</div>
+		<ul id="list">
+			<li class="active"><img src="../DDDVVV/p_s_0001.jpg" alt=""></li>
+			<li><img src="../DDDVVV/p_s_0002.jpg" alt=""></li>
+			<li><img src="../DDDVVV/p_s_0003.jpg" alt=""></li>
+		</ul>
+		<div id="bigger">
+			<img src="../DDDVVV/p_l_0001.jpg" alt="">
+		</div>
+	</div>
+</body>
+<script>
+	var oBox=document.getElementById('box');
+	var oChanpin=document.getElementById('chanpin');
+	var oMask=document.getElementById('mask');
+	var	oChanpinImg=document.querySelector('#chanpin img');
+	var oList=document.querySelectorAll("#list li");
+	console.log(oList)
+	var oListImgs=document.querySelectorAll("#list li img");
+	var oBigger=document.getElementById('bigger');
+	var oBiggerImg=document.querySelector('#bigger img');
+
+	for(var i=0;i<oList.length;i++){
+		oList[i].index=i;
+		oList[i].onmouseover=function(){
+			for(var j=0;j<oList.length;j++){
+				oList[j].className='';
+			}
+			this.className='active';
+			oChanpinImg.src="../DDDVVV/p_b_000"+(this.index+1)+".jpg";
+			oBiggerImg.src="../DDDVVV/p_l_000"+(this.index+1)+".jpg";
+		}
+	}
+	Ochanpin
+</script>
+</html>

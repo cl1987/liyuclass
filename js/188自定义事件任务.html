@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<button id="btn">点我一下呗</button>
+</body>
+<script>
+	var oBtn=document.getElementById('btn');
+	var make=new Event('yes');//一，创建事件
+	document.addEventListener('yes',function(){//二，添加事件
+		alert("today is a good day")
+	},false)
+	oBtn.onclick=function(){//三 触发事件
+		document.dispatchEvent(make);
+	}
+</script>
+</html>

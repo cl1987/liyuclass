@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		#box{
+			width:200px;
+			height:200px;
+			background:yellow;
+			position: absolute;
+			top:0px;
+			left:0px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	var oBox=document.getElementById('box');
+	document.oncontextmenu=function(ev){
+		oBox.style.left=ev.clientX+'px';
+		oBox.style.top=ev.clientY+'px';
+		oBox.style.display='block';
+		return false;
+	}
+	oBox.onclick=function(ev){
+		ev.stopPropagation();
+	}
+	document.onclick=function(){
+		oBox.style.display='none';
+	}
+</script>
+</html>

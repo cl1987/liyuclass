@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var arr = [1,12,13,24,35,23,12,24,13,15,17];
+	function unique(arr){
+		var result = [];
+		for(i = 0; i<arr.length; i++){			
+			if(result.indexOf(arr[i],0) == -1){
+				result.push(arr[i]);
+			}
+		}
+		return result;
+	}
+	var newArr = unique(arr);
+	console.log(":::8",arr);
+	console.log(":::9",newArr);
+
+	var tmp=0;
+	for(var i = 0; i<newArr.length;i++){
+		// console.log(newArr);
+		for(var j = i+1;j < newArr.length;j++){
+			if(newArr[i]>newArr[j]){
+				tmp = newArr[i];
+				newArr[i] = newArr[j];
+				newArr[j] = tmp;
+				// console.log(arr);
+			}
+		}
+	}
+	console.log(":::10",newArr);
+</script>
+</html>

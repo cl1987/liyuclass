@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			width:3000px;
+			height:4000px;
+		}
+		div{
+			width:50px;
+			height:40px;
+			background-image:url(../DDDVVV/9.jpg);
+			background-repeat:no-repeat;
+		/*	background-size:cover;*/
+			position: absolute;
+			left:0px;
+			top:0px;
+		}
+		div:nth-child(1){
+			z-index:10;
+		}
+		div:nth-child(2){
+			z-index:9;
+		}
+		div:nth-child(3){
+			z-index:8;
+		}
+		div:nth-child(4){
+			z-index:7;
+		}
+		div:nth-child(5){
+			z-index:6;
+		}
+		div:nth-child(6){
+			z-index:5;
+		}
+		div:nth-child(7){
+			z-index:4;
+		}
+		div:nth-child(8){
+			z-index:3;
+		}
+		div:nth-child(9){
+			z-index:2;
+		}
+		div:nth-child(10){
+			z-index:1;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+<script src="../js2/anmiation.js"></script>
+<script>
+	var aBox=document.getElementsByTagName('div');
+	document.onmousemove=function(ev){
+		aBox[0].style.left=getScrollLeft()+ev.clientX+'px';
+		aBox[0].style.top=getScrollTop()+ev.clientY+'px';
+		for(var i=aBox.length-1;i>0;i--){
+			aBox[i].style.left=aBox[i-1].offsetLeft+30+'px';
+			aBox[i].style.top=aBox[i-1].offsetTop+30+'px';
+		}
+	}
+</script>
+</html>

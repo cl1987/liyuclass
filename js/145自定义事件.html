@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+	</style>
+</head>
+<body>
+	<button id="btn">触发</button>
+</body>
+<script>
+	var oBtn=document.getElementById('btn')
+
+	var bh=new Event('text');//创建事件对象名称
+
+	document.addEventListener('text',function(){//监听事件，即让它干什么
+		alert('aaabbbccc');
+	},false)
+	
+	oBtn.onclick=function(){//运用这个事件
+		document.dispatchEvent(bh);
+	}
+</script>
+</html>

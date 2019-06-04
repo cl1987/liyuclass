@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			width:2000px;
+			height:1600px;
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+<script>
+	window.onclick=function(ev){
+		console.log("ev.clientX",ev.clientX);
+		console.log("ev.clientY",ev.clientY);
+		console.log("ev.pageX",ev.pageX);
+		console.log("ev.pageY",ev.pageY);
+		console.log("ev.screenX",ev.screenX);
+		console.log("ev.screenY",ev.screenY);
+	}
+	window.onmousewheel=function(ev){
+		console.log("ev.wheelDelta",ev.wheelDelta);
+	}
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<form action="http://www.kuazhu.com" target="_blank">
+		<div>
+			用户名：<input type="text" name="username">
+		</div>
+		<div>
+			密码：<input type="text" name="password">
+		</div>
+		<div>
+			性别：<input type="radio" name="sex" value="male">男
+			性别：<input type="radio" name="sex" value="female">女
+		</div>
+		<div>
+			爱好：<input type="checkbox" name="hobby" value="hobby1">篮球
+			<input type="checkbox" name="hobby" value="hobby2">足球
+			<input type="checkbox" name="hobby" value="hobby3">羽毛球
+		</div>
+		<div>
+			居住地：<select name="city" id="">
+				<option value="shanghai">上海</option>
+				<option value="beijing">北京</option>
+				<option value="shenzhen">深圳</option>
+			</select>
+		</div>
+		<div>
+			<input type="submit">
+		</div>
+	</form>
+</body>
+<script>
+	var aForms=document.forms;
+	var oForms=aForms[0];
+	oForms.username.disabled=true;
+</script>
+</html>

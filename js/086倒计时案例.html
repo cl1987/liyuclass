@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			background:#000;
+		}
+		#time{
+			color:#fff;
+			font-size:40px;
+			text-align: center;
+			margin-top:50px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="time">
+		距离活动结束还有15小时51分钟32秒
+	</div>
+</body>
+<script>
+	function toStr2(num){
+		return num<10 ? '0'+num:''+num;
+	}
+	var iTime=document.getElementById('time');
+
+	var endTime=new Date("2019-5-16 20:33:00");
+	var timer=0;
+	
+	// console.log(lastTime)
+	function countDown(){
+		var lastTime=endTime.getTime()-Date.now();
+		console.log("aaa")
+		if (lastTime<=0) {
+			lastTime=0
+			clearInterval(timer)
+		} 
+		var qLastTime=parseInt(lastTime/1000);
+		var iHour=parseInt(qLastTime/3600);
+		// console.log(iHour);
+		var iMinu=parseInt((qLastTime%3600)/60);
+		var iSeco=parseInt(qLastTime%3600%60);
+		iTime.innerHTML="距离活动结束还有"+ toStr2(iHour) +"小时"+ toStr2(iMinu) +"分钟"+ toStr2(iSeco) +"秒";
+	}
+	timer=setInterval(countDown,1000);
+	countDown();
+</script>
+</html>

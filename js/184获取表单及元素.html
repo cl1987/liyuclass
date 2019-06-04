@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<form action="http://www.kuazhu.com">
+		<div>
+			用户名：<input type="text" name="username">
+		</div>
+		<div>
+			密码：<input type="text" name="password">
+		</div>
+	</form>
+	<form action="">
+		
+	</form>
+</body>
+<script>
+	var aForms=document.forms;
+	var aElements=aForms[0].elements
+	var aElements1=aForms[0].elements[0]
+	var aElements2=aForms[0].elements["password"]
+	var aElements3=aForms[0].elements.password
+	var aElements4=aForms[0].password
+	console.log(aForms)
+	console.log(aForms[0])
+	console.log(aElements)
+	console.log(aElements1)
+	console.log(aElements2)
+	console.log(aElements3)
+	console.log(aElements4)
+</script>
+</html>

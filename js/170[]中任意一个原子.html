@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var str='dwadf46dgd6546546fts5doi46j5445vgskl5riw46uefoiSIOe'
+	var reg1=/[a-z]/g;
+	console.log(str)
+	console.log(str.replace(reg1,"*"))
+
+
+	var str1='你好hello 世界world'
+	var reg2=/[\u4e00-\u9fa5]/g;
+	function getLength(){
+		return str1.replace(reg2,'aa');
+	}
+	getLength()
+	console.log(str1.length);
+</script>
+</html>

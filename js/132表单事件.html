@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<form action="http://www.kuazhu.com" id="sheet" autocomplete="off" target="_blank">
+		<input type="text"id='text'>
+		<input type="submit"id='sub'>
+		<input type="reset" id='res'>
+		<p id="msg"></p>
+	</form>
+</body>
+<script>
+	var oForm=document.getElementById('sheet')
+	var oText=document.getElementById('text')
+	var oSub=document.getElementById('sub')
+	var oRes=document.getElementById('res')
+	var oMsg=document.getElementById('msg')
+
+	oText.onfocus=function(){
+		oMsg.innerHTML="请输入6-12有效字符";
+		oMsg.style.color='skyblue';
+	}
+	oText.onblur=function(){
+		var len=oText.value.length;
+		console.log(len);
+		if(len<6||len>12){
+			oMsg.innerHTML="请输入正确字数";
+			oMsg.style.color='red';
+		}
+	}
+	oText.onchange=function(){
+		console.log("输入信息有改动")
+	}
+	oText.oninput=function(){
+		var len=oText.value.length;
+		console.log(len);
+		if(len<6||len>12){
+			oMsg.innerHTML="请输入正确字数";
+			oMsg.style.color='red';
+		}else{
+			oMsg.innerHTML="合法信息";
+			oMsg.style.color='skyblue';
+		}
+	}
+	oForm.onsubmit=function(){
+		console.log(123322233)
+	}
+	oForm.onreset=function(){
+		console.log(5633333)
+	}
+	oSub.onclick=function(){
+		console.log(223)
+	}
+	oRes.onclick=function(){
+		console.log(6321)
+	}
+</script>
+</html>

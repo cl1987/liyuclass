@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<button id="btn">加油</button>
+</body>
+<script>
+	// setInterval(function(){
+	// 	console.log(111)
+	// },10000)
+	var oBtn=document.getElementById('btn')
+	function saywhat(){
+		console.log(111)
+	}
+	setInterval(saywhat,1000)
+	oBtn.onclick=function(){
+		clearInterval(saywhat)
+	}
+</script>
+</html>

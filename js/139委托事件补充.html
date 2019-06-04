@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<button id="btn">添加</button>
+	<ul id="q1">
+		<li>1 <a class="del" href="#">删除1</a></li>
+		<li>2 <a class="del" href="#">删除2</a></li>
+		<li>3 <a class="del" href="#">删除3</a></li>
+		<li>4 <a class="del" href="#">删除4</a></li>
+		<li>5 <a class="del" href="#">删除5</a></li>
+		<li>6 <a class="del" href="#">删除6</a></li>
+		<li>7 <a class="del" href="#">删除7</a></li>
+	</ul>
+</body>
+<script>
+	/*var oA = document.getElementsByTagName('a');
+	var oUl=document.getElementById('q1');
+	for(var i=0;i<oA.length;i++){
+		oA[i].onclick=function(){
+			oUl.removeChild(this.parentNode);
+		}
+	}*/
+	var oUl=document.getElementById('q1');
+	var oBtn=document.getElementById('btn');
+	oBtn.onclick=function(){
+		var oLi=document.createElement('li');
+		oLi.innerHTML='new li'
+		oUl.appendChild(oLi);
+		var oA=document.createElement('a');
+		oA.innerHTML='删除';
+		oA.href='#';
+		oA.className='del'
+		oLi.appendChild(oA);
+	}
+	oUl.onclick=function(ev){
+		var oTarget=ev.target;
+		if(oTarget.className=="del"){
+			oUl.removeChild(oTarget.parentNode);	
+		}else{
+			
+		}
+	}
+</script>
+</html>

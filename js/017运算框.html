@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="txt1">+
+	<input type="text" id="txt2">-
+	<input type="text" id="txt3">*
+	<input type="text" id="txt4">/
+	<input type="text" id="txt5">=
+	<input type="text" id="txt6">
+	<button id="bto">运算</button>
+</body>
+<script>
+	var ptxt1 =document.getElementById('txt1');
+	var ptxt2 =document.getElementById('txt2');
+	var ptxt3 =document.getElementById('txt3');
+	var ptxt4 =document.getElementById('txt4');
+	var ptxt5 =document.getElementById('txt5');
+	var ptxt6 =document.getElementById('txt6');
+	var btom =document.getElementById('bto');
+
+	btom.onclick = function(){
+		var qwer1 = parseInt(ptxt1.value);
+		var qwer2 = parseInt(ptxt2.value);
+		var qwer3 = parseInt(ptxt3.value);
+		var qwer4 = parseInt(ptxt4.value);
+		var qwer5 = parseInt(ptxt5.value);
+		// var qwer6 = parseInt(ptxt6.value);
+		// alert((qwer1 + qwer2 - qwer3) * qwer4 / qwer5);
+		var result = qwer1 + qwer2 - qwer3 * qwer4 / qwer5;
+		ptxt6.value = result;
+	}
+</script>
+</html>

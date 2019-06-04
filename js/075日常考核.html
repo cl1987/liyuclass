@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<button id="btn">添加</button>
+	<ul id="list"></ul>
+</body>
+<script>
+	var oTxt=document.getElementById('txt');
+	var oBtn=document.getElementById('btn');
+	var oList=document.getElementById('list');
+
+	oBtn.onclick=function(){
+		sVal=oTxt.value;
+		var newLi=document.createElement('li');
+		newLi.innerHTML=sVal;
+		oList.insertBefore(newLi,oList.firstChild);
+		oTxt.value="";
+	}
+</script>
+</html>

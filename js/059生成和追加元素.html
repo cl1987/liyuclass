@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin: 0px;
+			padding:0px;
+		}
+		div{
+			width:300px;
+			height:400px;
+			background:blue;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn">点我试试</button>
+</body>
+<script>
+	var oBtn = document.getElementById('btn');
+	oBtn.onclick = function(){
+	var oDiv = document.createElement('div');
+		// var oBody = document.body;
+		document.body.appendChild(oDiv);
+	}
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	<button id="btn">点我看键盘编码</button>
+</body>
+<script>
+	var oBtn=document.getElementById('btn')
+	var str='2wda2saw wda wadthty s64e itaw'
+	console.log(str)
+	console.log(str.replace(/\d/g,'*'))
+	console.log(str.replace(/\d/g,function(match,index,origin){
+		return parseInt(match)*10;
+	}))
+	console.log(str.search(/n/g))
+	console.log(str.match(/\d{2}/))
+	var str1='aabaabaa'
+	console.log(str1.split(/\s+/))
+	console.log(str1)
+	console.log(str1===str1.split('').reverse().join(''))//判断是否是回文
+	console.log(str.charAt(4))
+	console.log(str.charCodeAt(0))
+	document.onkeydown=function(ev){
+		console.log(ev.keyCode)
+	}
+	console.log(str.indexOf('w'))
+	console.log(str.lastIndexOf('w'));
+
+	var str3='http://www.kuazhu.com'
+	console.log(str3)
+	console.log(encodeURIComponent(str3));
+	console.log(decodeURIComponent(str3));
+	console.log(str1.concat(str3))
+	console.log(str3.slice(0,5))//包括起始下标，不包括结束下标
+	console.log(str3.substr(-5,5))//str.substr(起始下标,长度) ,截取字符串,下标可以是负数,负数表示从尾部开始计算
+	console.log(str3.substring(0,6))//str.substring(起始下标,结束下标),截取字符串,下标不可以是负数
+	console.log(str3.toLowerCase())
+	console.log(str3.toUpperCase())
+	var str4='   dwida aaowd   '
+	console.log(str4)
+	console.log(str4.trim())//去除字符串两边的空白
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			background :black;
+		}
+		#time{
+			margin:20px 0;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="time">
+		<img src="../DDDVVV/0.jpg" alt="">
+		<img src="../DDDVVV/1.jpg" alt="">:
+		<img src="../DDDVVV/0.jpg" alt="">
+		<img src="../DDDVVV/3.jpg" alt="">:
+		<img src="../DDDVVV/2.jpg" alt="">
+		<img src="../DDDVVV/4.jpg" alt="">
+	</div>
+</body>
+<script>
+	function change(num){
+		return num<10 ? '0'+num:''+num;
+	}
+	function showTime(){
+		var today=new Date();
+		var iHours=today.getHours();
+		var iMinutes=today.getMinutes();
+		var iSeconds=today.getSeconds();
+		var timeStr=change(iHours)+change(iMinutes)+change(iSeconds)
+	// console.log(timeStr) 
+		for(i=0;i<aImg.length;i++){
+		aImg[i].src="../DDDVVV/"+ timeStr.charAt(i) +".jpg"
+		}
+	}
+	var iTime=document.getElementById('time');
+	var aImg=iTime.children;
+	// console.log(aImg)
+	
+	setInterval(showTime,1000)
+	showTime();
+</script>
+</html>

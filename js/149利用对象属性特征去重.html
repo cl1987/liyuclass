@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var arr=[1,22,33,44,55,66,99,55,22,9]
+	console.log(arr);
+	function uniqueArr(arr){
+		var result=[];
+		var obj={};
+		for(var i=0;i<arr.length;i++){
+			obj[arr[i]]="";
+		}
+		for(attr in obj){
+			result.push(attr*1);
+		}
+		return result;
+	}
+	console.log(uniqueArr(arr));
+</script>
+</html>

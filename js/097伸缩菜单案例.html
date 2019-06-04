@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		#father{
+			width:400px;
+			height:400px;
+			background:#ccc;
+			position: absolute;
+			top:0px;
+			/*left:-400px;*/
+		}
+		#son{
+			width:100px;
+			height:400px;
+			background:pink;
+			position: absolute;
+			top:0px;
+			right:-100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="father">
+		<div id="son"></div>
+	</div>
+	
+</body>
+<script>
+	var iFather=document.getElementById('father');
+	var iSon=document.getElementById('son');
+	var timer=0
+	var iSpeed=0;
+	iFather.onmouseover=function() {
+		clearInterval(timer);
+		var iSpeed=0;
+		timer=setInterval(function(){
+			if (iFather.offsetLeft<0) {
+				iSpeed=10;
+			}else {
+				iSpeed=-10;
+			}
+			if (Math.abs(0-iFather.offsetLeft)<Math.abs(iSpeed)) {
+				iFather.style.left=0+"px";
+				clearInterval(timer)
+			} else {
+				iFather.style.left=iFather.offsetLeft+iSpeed+"px"
+			}
+		},30)
+	}
+	iFather.onmouseout=function() {
+		clearInterval(timer);
+		var iSpeed=0;
+		timer=setInterval(function(){
+			
+			if (iFather.offsetLeft<-400) {
+				iSpeed=7;
+			}else {
+				iSpeed=-7;
+			}
+			if (Math.abs(-400-iFather.offsetLeft)<Math.abs(iSpeed)) {
+				iFather.style.left=-400+"px";
+				clearInterval(timer)
+				console.log(iFather.offsetLeft)
+			} else {
+				iFather.style.left=iFather.offsetLeft+iSpeed+"px"
+			}
+		},30)
+	}
+</script>
+</html>

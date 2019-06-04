@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var arr = [1,23,45,34,56,5,132,23,32,1,];
+	var arr1 = [1,12,13,24,35,23,12,24,13,15,17];
+	// console.log("::::1",arr);
+	//循环遍历需要去重的数组
+	//定义一个新的数组用来存储数据
+	//用新的数组和老数组的每一项作比较，没有就添加到新的数组中去
+	function unique(arr){
+		var result = [];
+		for(var i = 0;i < arr.length;i++){
+			var isTure = false;
+			for(var j = 0;j<result.length;j++){
+				if(arr[i] == result[j]){
+					isTure = true;
+					break;
+				}
+			}
+			if(!isTure){
+				result.push(arr[i]);
+			}
+		}
+		return result;
+	}
+
+	var newArr = unique(arr);
+	console.log("::::2",arr);
+	console.log("::::3",newArr);
+	console.log("::::4",unique(arr));
+	console.log("::::5",arr1);
+	console.log("::::5",unique(arr1));
+</script>
+</html>

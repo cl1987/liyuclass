@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create rules</title>
+	<style>
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	#box{
+		width:100px;
+		height:100px;
+		background:red;
+		position:absolute;
+		top:100px;
+		left:100px;
+	}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	var oBox=document.getElementById('box');
+	document.onmousedown=function(ev){
+		// console.log(ev.clientX,ev.clientX-oBox.offsetLeft,ev.clientY,ev.clientY-oBox.offsetTop);
+		console.log('ev.clientX:::',ev.clientX)
+		console.log('ev.clientX-oBox.offsetLeft:::',ev.clientX-oBox.offsetLeft);
+		console.log('ev.clientY:::',ev.clientY)
+		console.log('ev.clientY-oBox.offsetTop:::',ev.clientY-oBox.offsetTop);
+		oBox.style.left=(ev.clientX-oBox.offsetLeft)+'px';
+		oBox.style.top=(ev.clientY-oBox.offsetTop)+'px';
+	}
+</script>
+</html>
